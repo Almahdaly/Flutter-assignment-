@@ -4,7 +4,7 @@ class CourseModel {
   final String title;
   final String subject;
   final String overview;
-  final String? photo;
+  final String? photo;  // جعلناها nullable لأنها قد تكون null
   final int totalStudents;
   final int totalModules;
   final String created;
@@ -15,7 +15,7 @@ class CourseModel {
     required this.title,
     required this.subject,
     required this.overview,
-    this.photo,
+    this.photo,  // optional
     required this.totalStudents,
     required this.totalModules,
     required this.created,
@@ -28,7 +28,7 @@ class CourseModel {
       title: map['title'] ?? '',
       subject: map['subject'] ?? '',
       overview: map['overview'] ?? '',
-      photo: map['photo'],
+      photo: map['photo'],  // يمكن أن تكون null
       totalStudents: map['total_students'] ?? 0,
       totalModules: map['total_modules'] ?? 0,
       created: map['created'] ?? '',
@@ -48,4 +48,4 @@ class CourseModel {
       'created': created,
     };
   }
-}
+} 
