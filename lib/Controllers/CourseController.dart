@@ -142,7 +142,7 @@ class CourseController extends GetxController {
 
         // إرسال الطلب بدون تحديد Content-Type
         final response = await _apiService.post(
-          '$baseAPIURLV1/courses/',
+          '$baseAPIURLV1/teachers/courses/create/',
           data: formData,
         );
 
